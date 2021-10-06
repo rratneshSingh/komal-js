@@ -22,6 +22,19 @@ class BookList {
         this.list.push( book );
         return book;
     }
+
+    removeBook( id ) {
+        // const index = this.list.findIndex( book => {
+        //     return id === book.id;
+        // } );
+        // if ( index !== -1 ) {
+        //     this.list.splice( index, 1 );
+        // }
+
+        this.list = this.list.filter( book => {
+            return id !== book.id;
+        } );
+    }
 }
 
 var bookList = new BookList();
